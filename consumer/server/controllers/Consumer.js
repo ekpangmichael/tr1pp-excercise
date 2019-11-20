@@ -29,8 +29,6 @@ class Consumer{
 
           channel.ack(message);
       })
-
-      console.log("Waiting for messages...");
     } catch (error) {
       throw error;
     }
