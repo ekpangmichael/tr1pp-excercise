@@ -6,7 +6,7 @@ const { REDIS_PORT = 6379 } = process.env;
 const client = redis.createClient(REDIS_PORT);
 /**
  * @class Test
- * @description class will implement bot functionality
+ * @description class will implement controller functionality
  */
 class Message{
   /**

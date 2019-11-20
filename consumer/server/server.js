@@ -10,7 +10,7 @@ mongoose.connect(DATABASE_URI);
 
 const app = express();
 
-const { PORT = 3002 } = process.env;
+const { PORT = 3001 } = process.env;
 
 app.use(cors());
 
@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
-  res.status(err.status || 3002).json({
+  res.status(err.status || 3001).json({
     errors: {
       message: err.message
     }

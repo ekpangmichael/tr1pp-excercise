@@ -2,7 +2,7 @@ import amqp from "amqplib";
 import Message from "../models/message_model";
 /**
  * @class Test
- * @description class will implement bot functionality
+ * @description class will implement consumer functionality
  */
 class Consumer{
   /**
