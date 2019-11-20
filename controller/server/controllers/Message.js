@@ -5,7 +5,7 @@ import redis from 'redis';
 const { REDIS_PORT = 6379 } = process.env;
 const client = redis.createClient(REDIS_PORT);
 /**
- * @class Test
+ * @class message
  * @description class will implement controller functionality
  */
 class Message{

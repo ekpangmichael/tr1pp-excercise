@@ -1,7 +1,7 @@
 import amqp from "amqplib";
 import Message from "../models/message_model";
 /**
- * @class Test
+ * @class consumer
  * @description class will implement consumer functionality
  */
 class Consumer{
