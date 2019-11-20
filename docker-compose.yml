@@ -1,0 +1,43 @@
+version: '3'
+services:
+ 
+  controller:
+    build: './controller'
+    ports:
+      - "3000:3000"
+    depends_on: 
+      - rabbitmq
+      - redis
+    environment:
+      - AMQP_URL=amqp://rabbitmq:5672
+      - REDIS_PORT=redis://redis:6379
+
+  consumer:
+    build: './consumer'
+    ports:
+      - "3001:3001"
+    depends_on: 
+      - mongodb
+      - rabbitmq
+    environment:
+      - MONGO_DB_URI=mongodb://mongodb/tr1pp
+      - AMQP_URL=amqp://rabbitmq:5672
+  
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+      - "5671:5671"
+
+  
