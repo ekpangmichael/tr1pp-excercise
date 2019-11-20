@@ -3,9 +3,9 @@
 - mongodb
 - Rabbitmq
 
-## How to get a token
+## How to get api token
 
-- use the endpoint `api/v1/token` passing your email
+- use the endpoint `api/v1/token` to get your api token and pass it in the header when sending a message
 
 
 ###  endpoints `/api/v1/`
